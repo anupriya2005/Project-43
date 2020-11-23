@@ -1,14 +1,16 @@
-var player;
+var player, playerImg;
 var score=0;
 var target;
 var obs1, obs2, obs3, obs4, obs5, obs6, obs7, obs8, obs9, obs10;
 var obs11, obs12, obs13, obs14, obs15, obs16, obs17, obs18, obs19, obs20;
 var obs21, obs22, obs23, obs24, obs25, obs26, obs27;
 
+
+
 function setup() {
   createCanvas(displayWidth-270, displayHeight-90);
   player = createSprite(displayWidth-900, displayHeight-120, 10, 10);
-  target = createSprite(displayWidth-850, displayHeight-400, 20, 20);
+   target = createSprite(displayWidth-850, displayHeight-400, 20, 20);
   edges = createEdgeSprites();
 //outer layer
  obs1 = createSprite(displayWidth-1330, displayHeight-430, 13, 620);
@@ -136,6 +138,7 @@ player.velocityY = 0;
 
 if(player.isTouching(target)){
   textSize(30);
+  fill("black");
 text("You win", displayWidth-850, displayHeight-400);
 player.velocityX = 0;
 player.velocityY = 0;
